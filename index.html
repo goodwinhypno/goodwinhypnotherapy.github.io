@@ -40,6 +40,21 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Keyframes for the fade-in-up animation in the hero section */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Class to apply the animation */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -48,7 +63,6 @@
     <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm transition-all duration-300">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#home" class="flex items-center space-x-2">
-                <!-- I've replaced the placeholder with the actual logo URL and increased its size. -->
                 <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/Logo-1.jpg" alt="Goodwin Hypnotherapy Logo" class="h-16 w-auto">
             </a>
 
@@ -83,9 +97,14 @@
         <!-- Hero Section -->
         <section id="home" class="hero-gradient py-20 md:py-32">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">Unlock Your Potential Through Hypnotherapy</h1>
-                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Transform your life with safe, effective, and professional hypnotherapy techniques.</p>
-                <div class="mt-8 flex justify-center items-center gap-4">
+                <!-- *** IMPORTANT FIX *** -->
+                <!-- The animation now points to a file on your GitHub site. -->
+                <!-- You must upload your animation file and name it "animation.gif" for it to appear. -->
+                <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/animation.gif" alt="Animated Goodwin Hypnotherapy Logo" class="mx-auto mb-8 h-32 w-auto fade-in-up" style="animation-delay: 0.2s;">
+                
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight fade-in-up" style="animation-delay: 0.4s;">Unlock Your Potential Through Hypnotherapy</h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto fade-in-up" style="animation-delay: 0.6s;">Transform your life with safe, effective, and professional hypnotherapy techniques.</p>
+                <div class="mt-8 flex justify-center items-center gap-4 fade-in-up" style="animation-delay: 0.8s;">
                     <a href="#booking" class="bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-transform hover:scale-105 shadow-lg">Book Your Session</a>
                     <a href="#about" class="bg-white text-indigo-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-transform hover:scale-105 shadow-lg">Learn More</a>
                 </div>
@@ -123,7 +142,6 @@
              <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-5 gap-12 items-center">
                     <div class="md:col-span-2 flex justify-center">
-                        <!-- Centered and styled therapist image -->
                         <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/Ari-1.jpg" alt="Portrait of Ari Goodwin" class="rounded-xl shadow-2xl w-full max-w-sm object-cover aspect-square" onerror="this.onerror=null;this.src='https://placehold.co/400x400/d1c4e9/333?text=Ari+Goodwin';">
                     </div>
                     <div class="md:col-span-3">
@@ -276,7 +294,6 @@
                     <h4 class="text-lg font-semibold">Contact</h4>
                     <ul class="mt-2 space-y-1 text-gray-400">
                         <li>Phone: (617) 308-4960</li>
-                        <!-- Corrected mailto link -->
                         <li>Email: <a href="mailto:goodwinhypno@gmail.com" class="hover:text-white underline">goodwinhypno@gmail.com</a></li>
                     </ul>
                 </div>
@@ -305,13 +322,11 @@
                     const targetElement = document.querySelector(targetId);
 
                     if (targetElement) {
-                        // Smoothly scroll to the target section
                         targetElement.scrollIntoView({
                             behavior: 'smooth'
                         });
                     }
                     
-                    // If the mobile menu is open, close it after clicking a link
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                     }
