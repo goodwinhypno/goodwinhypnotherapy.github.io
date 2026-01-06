@@ -50,23 +50,23 @@
     <header id="header" class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="flex-shrink-0">
-                <!-- Height set to h-32 as requested (approx 128px) -->
-                <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/logo-static2.png" alt="GoodHyp Logo" class="h-32 w-auto object-contain" onerror="this.onerror=null;this.src='https://placehold.co/300x120/f0f9ff/4f46e5?text=GoodHyp';">
+                <!-- Balanced logo size: h-16 (64px) -->
+                <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/logo-static2.png" alt="GoodHyp Logo" class="h-16 w-auto object-contain" onerror="this.onerror=null;this.src='https://placehold.co/200x60/f0f9ff/4f46e5?text=GoodHyp';">
             </a>
 
-            <!-- Desktop Navigation - Reordered -->
+            <!-- Desktop Navigation - Balanced Spacing -->
             <div class="hidden lg:flex items-center space-x-8">
                 <a href="#about" class="text-gray-600 hover:text-indigo-600 font-semibold text-sm tracking-wide transition-colors">About</a>
                 <a href="#philosophy" class="text-gray-600 hover:text-indigo-600 font-semibold text-sm tracking-wide transition-colors">Philosophy</a>
                 <a href="#help" class="text-gray-600 hover:text-indigo-600 font-semibold text-sm tracking-wide transition-colors">Can It Help?</a>
                 <a href="#testimonials" class="text-gray-600 hover:text-indigo-600 font-semibold text-sm tracking-wide transition-colors">Testimonials</a>
                 <a href="#payment" class="text-gray-600 hover:text-indigo-600 font-semibold text-sm tracking-wide transition-colors">Book a Session</a>
-                <a href="#contact" class="bg-indigo-600 text-white px-5 py-2.5 rounded-full hover:bg-indigo-700 transition-all shadow-md transform hover:scale-105 active:scale-95 text-sm font-bold">Contact</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition-all shadow-md transform hover:scale-105 active:scale-95 text-xs font-bold uppercase tracking-wider">Contact</a>
             </div>
 
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none transition-colors">
-                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
@@ -85,10 +85,10 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero-gradient py-24 md:py-40">
+        <section id="home" class="hero-gradient py-24 md:py-36">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 leading-tight mb-6">Unlock Your Potential</h1>
-                <p class="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto mb-12 font-medium">Safe, effective, professional hypnotherapy for lasting positive change.</p>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto mb-12 font-medium italic">"Live Like A Lion!"</p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
                     <a href="#payment" class="w-full sm:w-auto bg-indigo-600 text-white px-10 py-4 rounded-2xl text-xl font-bold hover:bg-indigo-700 transition-all transform hover:scale-105 shadow-xl">View Sessions</a>
                     <a href="#about" class="w-full sm:w-auto bg-white text-indigo-600 px-10 py-4 rounded-2xl text-xl font-bold hover:bg-gray-50 transition-all border-2 border-indigo-50 shadow-lg">Meet Ari</a>
@@ -96,45 +96,46 @@
             </div>
         </section>
 
-        <!-- About Section (Bio) -->
-        <section id="about" class="py-24 md:py-32 bg-white section-fade-in">
-            <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <div class="flex justify-center relative">
-                        <div class="absolute -inset-4 bg-indigo-100 rounded-3xl -z-10 transform -rotate-3"></div>
-                        <img src="Ari-1.jpg" alt="Ari Goodwin" class="rounded-3xl shadow-2xl w-full max-w-md object-cover border-8 border-white" onerror="this.onerror=null;this.src='https://placehold.co/400x500/d1c4e9/333?text=Ari+Goodwin';">
+        <!-- About Section (Bio) - Stacked for better space management -->
+        <section id="about" class="py-20 md:py-24 bg-white section-fade-in">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <div class="flex flex-col items-center">
+                    <div class="relative mb-12">
+                        <div class="absolute -inset-4 bg-indigo-50 rounded-3xl -z-10 transform -rotate-2"></div>
+                        <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/Ari-1.jpg" alt="Ari Goodwin" class="rounded-3xl shadow-2xl w-full max-w-sm object-cover border-8 border-white" onerror="this.onerror=null;this.src='https://placehold.co/400x500/d1c4e9/333?text=Ari+Goodwin';">
                     </div>
-                    <div>
-                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-2">Meet Ari</h2>
-                        <h3 class="text-2xl text-indigo-600 font-bold mb-8 uppercase tracking-widest">Certified Hypnotherapist</h3>
-                        <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
-                            <p>Ari Goodwin, a graduate of the Hypnosis Motivation Institute, brings a wealth of business and corporate training experience to his practice. His approach is uniquely tailored to guide each client toward their absolute highest potential.</p>
-                            
-                            <div class="bg-indigo-50 p-8 rounded-3xl border-l-8 border-indigo-600 italic shadow-inner">
-                                "A devoted father of six and grandfather of four, Ari is adept at working with clients of all ages. From athletes and artists to zookeepers and zipliners, we all crave improved performance, happier lives, and personal growth."
-                            </div>
-
-                            <p>Ari utilizes a range of techniques such as NLP, tapping, imagery, past life analysis, and personalized induction methods to achieve effective results. He has a proven track record with both newcomers to hypnosis and those who have struggled with other practitioners.</p>
-                            
-                            <div class="pt-6">
-                                <h4 class="font-black text-gray-900 uppercase tracking-widest text-base mb-6 border-b pb-2 inline-block">Core Specialties</h4>
-                                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base font-semibold">
-                                    <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Athletic Peak Performance</li>
-                                    <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Corporate Leadership</li>
-                                    <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Tinnitus & ADHD</li>
-                                    <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Trauma Recovery</li>
-                                    <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Motivation Mastery</li>
-                                    <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Phobia Treatment</li>
-                                </ul>
-                            </div>
+                    
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-2">Meet Ari</h2>
+                    <h3 class="text-2xl text-indigo-600 font-bold mb-8 uppercase tracking-widest">Certified Hypnotherapist</h3>
+                    
+                    <div class="text-gray-600 leading-relaxed space-y-6 text-lg text-left">
+                        <p>Ari Goodwin, a graduate of the Hypnosis Motivation Institute, brings a wealth of business and corporate training experience to his practice. His approach is uniquely tailored to guide each client toward their absolute highest potential.</p>
+                        
+                        <div class="bg-indigo-50 p-8 rounded-3xl border-l-8 border-indigo-600 italic shadow-inner">
+                            "A devoted father of six and grandfather of four, Ari is adept at working with clients of all ages. From athletes and artists to zookeepers and zipliners, we all crave improved performance, happier lives, and personal growth."
                         </div>
+
+                        <p>Ari utilizes a range of techniques such as NLP, tapping, imagery, past life analysis, and personalized induction methods to achieve effective results. He has a proven track record with both newcomers to hypnosis and those who have struggled with other practitioners.</p>
+                        
+                        <div class="pt-6">
+                            <h4 class="font-black text-gray-900 uppercase tracking-widest text-base mb-6 border-b pb-2 inline-block">Core Specialties</h4>
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base font-semibold">
+                                <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Athletic Peak Performance</li>
+                                <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Corporate Leadership</li>
+                                <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Tinnitus & ADHD</li>
+                                <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Trauma Recovery</li>
+                                <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Motivation Mastery</li>
+                                <li class="flex items-center"><span class="w-2.5 h-2.5 bg-indigo-500 rounded-full mr-3"></span>Phobia Treatment</li>
+                            </ul>
+                        </div>
+                        <p class="font-black text-gray-800 text-center pt-4">He empowers you to <span class="text-indigo-600 uppercase">"LIVE LIKE A LION!"</span> and create a happier, more fulfilling life.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Philosophy Section -->
-        <section id="philosophy" class="py-24 md:py-32 bg-gray-50 section-fade-in overflow-hidden">
+        <section id="philosophy" class="py-24 md:py-32 bg-gray-50 section-fade-in overflow-hidden border-y border-gray-100">
             <div class="container mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
                     <div class="order-2 lg:order-1 space-y-8">
@@ -159,7 +160,8 @@
                 <div class="max-w-3xl mx-auto mb-20">
                     <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-10">How Can Hypnosis Help Me?</h2>
                     <div class="inline-block relative mb-12">
-                        <img src="ari-lion.jpeg" alt="Ari on a Lion" class="rounded-3xl shadow-2xl max-w-sm w-full border-8 border-indigo-50" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e0f7fa/333?text=Ari+on+Lion';">
+                        <!-- Updated source to absolute URL for lion image -->
+                        <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/ari-lion.jpeg" alt="Ari on a Lion" class="rounded-3xl shadow-2xl max-w-sm w-full border-8 border-indigo-50" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e0f7fa/333?text=Ari+on+Lion';">
                         <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-8 py-3 rounded-2xl shadow-xl border border-indigo-50">
                             <p class="text-2xl font-black text-indigo-600 italic tracking-tight uppercase whitespace-nowrap">"Live Like A Lion!"</p>
                         </div>
@@ -226,25 +228,25 @@
         
         <!-- Testimonials -->
         <section id="testimonials" class="py-24 md:py-32 bg-gray-900 text-white section-fade-in">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-20">
+            <div class="container mx-auto px-6 text-center">
+                <div class="mb-20">
                     <h2 class="text-4xl md:text-5xl font-black mb-4 uppercase tracking-widest">Testimonials</h2>
                     <p class="text-xl text-gray-400">Transformations from the GoodHyp community.</p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-10">
-                    <div class="glass-card p-10 rounded-[3rem] shadow-2xl">
+                    <div class="glass-card p-10 rounded-[3rem] shadow-2xl text-left">
                         <div class="text-indigo-400 mb-6">★★★★★</div>
-                        <blockquote class="text-lg leading-relaxed mb-8 italic">"Working with Ari at GoodHyp has been life-changing. I learned powerful techniques to manage my stress and finally feel in control again."</blockquote>
+                        <blockquote class="text-lg leading-relaxed mb-8 italic text-gray-200">"Working with Ari at GoodHyp has been life-changing. I learned powerful techniques to manage my stress and finally feel in control again."</blockquote>
                         <cite class="block font-bold text-indigo-400">— Sarah M.</cite>
                     </div>
-                    <div class="glass-card p-10 rounded-[3rem] shadow-2xl">
+                    <div class="glass-card p-10 rounded-[3rem] shadow-2xl text-left">
                         <div class="text-indigo-400 mb-6">★★★★★</div>
-                        <blockquote class="text-lg leading-relaxed mb-8 italic">"I had tried everything to quit smoking. GoodHyp gave me the mental tools I needed. I've been smoke-free for 8 months now."</blockquote>
+                        <blockquote class="text-lg leading-relaxed mb-8 italic text-gray-200">"I had tried everything to quit smoking. GoodHyp gave me the mental tools I needed. I've been smoke-free for 8 months now."</blockquote>
                         <cite class="block font-bold text-indigo-400">— Michael R.</cite>
                     </div>
-                    <div class="glass-card p-10 rounded-[3rem] shadow-2xl">
+                    <div class="glass-card p-10 rounded-[3rem] shadow-2xl text-left">
                         <div class="text-indigo-400 mb-6">★★★★★</div>
-                        <blockquote class="text-lg leading-relaxed mb-8 italic">"Chronic pain had taken over my life. Through sessions with Ari, I learned to change my body's perception. My quality of life is night and day."</blockquote>
+                        <blockquote class="text-lg leading-relaxed mb-8 italic text-gray-200">"Chronic pain had taken over my life. Through sessions with Ari, I learned to change my body's perception. My quality of life is night and day."</blockquote>
                         <cite class="block font-bold text-indigo-400">— Jennifer L.</cite>
                     </div>
                 </div>
@@ -293,7 +295,7 @@
                     </div>
                 </div>
 
-                <!-- Policy Card -->
+                <!-- Policy Card - Lowercase emails ensured -->
                 <div class="max-w-4xl mx-auto p-12 bg-indigo-50/50 rounded-[3rem] border border-indigo-100 text-left">
                     <h4 class="text-xl font-black text-gray-900 uppercase mb-6 tracking-widest border-b-2 border-indigo-100 pb-2">Cancellation Policy</h4>
                     <p class="text-gray-700 mb-8 leading-relaxed">Respect for our providers' time ensures all clients have fair access to the schedule. We require at least <strong>24 hours' notice</strong> for all cancellations or reschedules.</p>
@@ -311,8 +313,8 @@
 
         <!-- Booking Section -->
         <section id="booking" class="py-24 md:py-32 bg-gray-50 section-fade-in">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
+            <div class="container mx-auto px-6 text-center">
+                <div class="mb-16">
                     <h2 class="text-4xl md:text-5xl font-black text-gray-900 uppercase">Schedule Your Time</h2>
                     <p class="text-lg text-gray-600 mt-4">Find a slot that works for your journey.</p>
                 </div>
@@ -333,7 +335,6 @@
                     <h3 class="text-4xl font-black text-indigo-400 italic tracking-tighter">GoodHyp</h3>
                     <p class="text-gray-400 text-lg leading-relaxed font-light">Professional hypnotherapy for peak performance, corporate leadership, and total life transformation. <strong>Live Like A Lion!</strong></p>
                     <div class="bg-white p-3 inline-block rounded-3xl shadow-2xl">
-                        <!-- Website QR Code Frame -->
                         <div class="w-40 h-40 bg-gray-100 rounded-2xl flex items-center justify-center text-gray-400 text-[10px] font-black uppercase text-center p-4">
                             QR Code<br>Placeholder
                         </div>
@@ -348,7 +349,7 @@
                         <li><a href="#payment" class="hover:text-white hover:translate-x-2 inline-block transition-all text-indigo-300">Pricing & Promos</a></li>
                     </ul>
                 </div>
-                <div class="space-y-8">
+                <div class="space-y-8 text-left">
                     <h4 class="text-lg font-black uppercase tracking-widest text-indigo-400 border-b border-gray-800 pb-2">Connect</h4>
                     <ul class="space-y-6 text-lg font-medium">
                         <li class="flex items-center text-gray-300">
@@ -370,7 +371,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="mt-24 border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-black uppercase tracking-[0.4em] text-gray-700 space-y-4 md:space-y-0">
+            <div class="mt-24 border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-black uppercase tracking-[0.4em] text-gray-700 space-y-4 md:space-y-0 text-center md:text-left">
                 <p>&copy; 2026 GoodHyp.</p>
                 <p>Digital Presence Managed by Modit & Kobi.</p>
             </div>
