@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goodwin Hypnotherapy - Professional Hypnotherapy Services</title>
-    <meta name="description" content="Professional hypnotherapy services for anxiety, smoking cessation, weight management, and personal development.">
+    <title>GoodHyp - Professional Hypnotherapy Services</title>
+    <meta name="description" content="Professional hypnotherapy services for anxiety, smoking cessation, weight management, and personal development. Live Like A Lion!">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,17 +15,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Custom styles for a professional feel */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #F8F9FA;
             color: #343a40;
         }
-        /* Custom gradient for the hero section */
         .hero-gradient {
             background: linear-gradient(135deg, #e0f7fa 0%, #d1c4e9 100%);
         }
-        /* Animation for sections appearing on scroll */
         .section-fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -35,6 +32,12 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .benefit-card {
+            transition: transform 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -43,19 +46,22 @@
     <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm transition-all duration-300">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#home" class="flex items-center space-x-2">
-                <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/logo-static2.png" alt="Goodwin Hypnotherapy Logo" class="h-16 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/200x60/e0f7fa/333?text=Goodwin+Hypnotherapy';">
+                <!-- Doubled size: h-32 -->
+                <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/logo-static2.png" alt="GoodHyp Logo" class="h-32 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/250x100/e0f7fa/333?text=GoodHyp';">
             </a>
 
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center space-x-8">
+            <!-- Desktop Navigation - New Requested Order -->
+            <div class="hidden lg:flex items-center space-x-6 text-sm font-semibold uppercase tracking-tight">
                 <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors">About</a>
                 <a href="#philosophy" class="text-gray-600 hover:text-indigo-600 transition-colors">Philosophy</a>
+                <a href="#help" class="text-gray-600 hover:text-indigo-600 transition-colors">Can It Help?</a>
                 <a href="#testimonials" class="text-gray-600 hover:text-indigo-600 transition-colors">Testimonials</a>
-                <a href="#booking" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow">Book a Session</a>
+                <a href="#payment" class="text-gray-600 hover:text-indigo-600 transition-colors">Book a Session</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-md">Contact</a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none">
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
@@ -63,11 +69,13 @@
         </nav>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4">
             <a href="#about" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md">About</a>
             <a href="#philosophy" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md">Philosophy</a>
+            <a href="#help" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md">Can It Help?</a>
             <a href="#testimonials" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md">Testimonials</a>
-            <a href="#booking" class="block mt-2 text-center bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow">Book a Session</a>
+            <a href="#payment" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md">Book a Session</a>
+            <a href="#contact" class="block mt-2 text-center bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow">Contact</a>
         </div>
     </header>
 
@@ -76,159 +84,230 @@
         <section id="home" class="hero-gradient py-20 md:py-32">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">Unlock Your Potential Through Hypnotherapy</h1>
-                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Transform your life with safe, effective, and professional hypnotherapy techniques.</p>
-                <div class="mt-8 flex justify-center items-center gap-4">
-                    <a href="#booking" class="bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-transform hover:scale-105 shadow-lg">Book Your Session</a>
-                    <a href="#philosophy" class="bg-white text-indigo-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-transform hover:scale-105 shadow-lg">Our Philosophy</a>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto italic">"Live Like A Lion!"</p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#payment" class="w-full sm:w-auto bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-transform hover:scale-105 shadow-lg">View Services</a>
+                    <a href="#about" class="w-full sm:w-auto bg-white text-indigo-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-transform hover:scale-105 shadow-lg border border-indigo-100">Meet Ari</a>
                 </div>
             </div>
         </section>
 
-        <!-- New Philosophy Section with Animated GIF -->
-        <section id="philosophy" class="py-16 md:py-24 bg-white section-fade-in">
+        <!-- About Section (Bio) -->
+        <section id="about" class="py-16 md:py-24 bg-white section-fade-in">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="text-center md:text-left">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Live Like a Lion</h2>
-                        <p class="mt-4 text-lg text-gray-600">Our philosophy is inspired by the quiet confidence of the lion. It isn't about aggression; it's about harnessing your inner strength to face challenges, own your domain, and find peace in knowing you are in control.</p>
-                        <p class="mt-4 text-lg text-gray-600">Hypnotherapy helps you discover and unleash that powerful, serene self that resides within you.</p>
-                    </div>
                     <div class="flex justify-center">
-                        <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/logo-animation.GIF" alt="Goodwin Hypnotherapy Animated Logo" class="max-w-sm w-full" onerror="this.onerror=null;this.src='https://placehold.co/400x400/d1c4e9/333?text=Logo+Animation';">
+                        <img src="Ari-1.jpg" alt="Ari Goodwin" class="rounded-2xl shadow-2xl w-full max-w-sm object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x500/d1c4e9/333?text=Ari+Goodwin';">
+                    </div>
+                    <div class="text-gray-600 leading-relaxed">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Meet Ari — Your Catalyst for Change</h2>
+                        <h3 class="text-xl text-indigo-600 font-semibold mb-6 uppercase tracking-wider">Certified Hypnotherapist</h3>
+                        <p class="mb-4">Ari Goodwin, a graduate of the Hypnosis Motivation Institute, brings a wealth of business and corporate training experience to his practice. His approach is tailored to guide each client toward their highest potential.</p>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">Specialties Include:</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6 text-sm font-medium">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Athletic Peak Performance</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Corporate Leadership</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Tinnitus & ADHD Management</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Trauma Recovery</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Motivation & Indecision</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>Phobia Treatment</li>
+                        </ul>
+                        <p class="mb-6">Ari utilizes a range of techniques such as NLP, tapping, imagery, past life analysis and personalized induction methods to achieve effective results. He has a proven track record with both newcomers to hypnosis and those who have struggled with other practitioners.</p>
+                        <div class="bg-indigo-50 p-6 rounded-2xl border-l-4 border-indigo-600 mb-4">
+                            <p class="italic">"A devoted father of six and grandfather of four, Ari is adept at working with clients of all ages. From athletes and artists to zookeepers and zipliners, we all crave improved performance, happier lives, and personal growth."</p>
+                        </div>
+                        <p class="font-bold text-gray-800">He empowers you to <span class="text-indigo-600 uppercase">"LIVE LIKE A LION!"</span> and create a happier, more fulfilling life.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Hypnotherapy Section -->
-        <section id="about" class="py-16 md:py-24 bg-gray-50 section-fade-in">
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="py-16 md:py-24 bg-gray-50 section-fade-in">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 uppercase tracking-widest">Live Like A Lion!</h2>
+                        <div class="space-y-4 text-lg text-gray-600 leading-relaxed">
+                            <p>Our philosophy is inspired by the majestic quiet confidence of the lion. It isn't about aggression or noise; it's about harnessing your profound inner strength to face life's challenges with absolute calm.</p>
+                            <p>To <strong>Live Like A Lion!</strong> is to have no fear of your own potential. It means taking on the goals you desire, being the king of your own domain, and owning your space in this world with authority.</p>
+                            <p>GoodHyp helps you discover and unleash that powerful, serene self that resides within you, allowing you to move through life with purpose and quiet power.</p>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2 flex justify-center">
+                        <img src="https://goodwinhypno.github.io/goodwinhypnotherapy.github.io/logo-animation.GIF" alt="GoodHyp Animation" class="max-w-md w-full rounded-2xl shadow-xl border-4 border-white" onerror="this.onerror=null;this.src='https://placehold.co/400x400/d1c4e9/333?text=Lion+Animation';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Can It Help? Section -->
+        <section id="help" class="py-16 md:py-24 bg-white section-fade-in">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">What is Hypnotherapy?</h2>
-                    <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">A medically recognized tool for positive change.</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">A Natural State of Focused Attention</h3>
-                        <p class="text-gray-600 mb-4">Hypnotherapy is a therapeutic technique that uses guided relaxation and focused attention to achieve a heightened state of awareness, often called a trance. In this natural state, you are more open to suggestions that can help you modify your perceptions, behaviors, sensations, and emotions.</p>
-                        <p class="text-gray-600 font-medium p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-500">It's important to know: You are always in control during hypnosis and cannot be made to do anything against your will. It is a collaborative process between you and your therapist.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">How Can Hypnosis Help Me?</h2>
+                    <div class="flex flex-col items-center my-8">
+                        <img src="Ari-lion.jpeg" alt="Ari on a Lion" class="rounded-2xl shadow-2xl max-w-sm w-full border-4 border-white" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e0f7fa/333?text=Ari+on+Lion';">
+                        <p class="mt-6 text-2xl font-black text-indigo-600 tracking-tighter italic uppercase">"Live Like A Lion!"</p>
                     </div>
-                    <div class="bg-gray-100 p-8 rounded-xl shadow-md">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Key Benefits & Applications:</h4>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Anxiety & Stress Management</li>
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Smoking Cessation</li>
-                            <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Weight Management Support</li>
-                             <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Chronic Pain & Phobia Resolution</li>
+                    <p class="mt-6 text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                        Hypnosis is a state of focused attention and deep relaxation that can help manage symptoms and address the psychological factors of various medical conditions. It is an effective complementary treatment used alongside other therapies like CBT.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 benefit-card">
+                        <h3 class="text-xl font-bold text-indigo-600 mb-6 uppercase border-b border-indigo-100 pb-2">Mental Health</h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li><strong>Anxiety Disorders:</strong> Manage stress, panic attacks, and procedural anxiety by retraining brain responses.</li>
+                            <li><strong>Phobias:</strong> Reframe negative beliefs and use "imaginal exposure" to desensitize fears.</li>
+                            <li><strong>PTSD:</strong> Safely process traumatic memories and improve emotional regulation.</li>
+                            <li><strong>Depression:</strong> Improve self-confidence and promote positive outlooks.</li>
+                            <li><strong>Tinnitus:</strong> Focus the mind on blocking irritating noise from consciousness.</li>
+                            <li><strong>Sleep Disorders:</strong> Improve sleep quality and restorative slow-wave sleep.</li>
                         </ul>
                     </div>
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 benefit-card">
+                        <h3 class="text-xl font-bold text-indigo-600 mb-6 uppercase border-b border-indigo-100 pb-2">Pain & Medical</h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li><strong>Chronic Pain:</strong> Alter perception of fibromyalgia, arthritis, and back pain for long-term relief.</li>
+                            <li><strong>Procedural Pain:</strong> Manage pain during medical/dental surgery; can reduce anesthesia needs.</li>
+                            <li><strong>Cancer Support:</strong> Alleviate side effects like pain, nausea, and vomiting.</li>
+                            <li><strong>IBS:</strong> "Gut-directed hypnotherapy" targets the brain-gut connection.</li>
+                            <li><strong>Migraines:</strong> Manage and alleviate the pain from tension and headaches.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 benefit-card">
+                        <h3 class="text-xl font-bold text-indigo-600 mb-6 uppercase border-b border-indigo-100 pb-2">Behavior & Habits</h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li><strong>Smoking Cessation:</strong> Address underlying habits and subconscious motivations.</li>
+                            <li><strong>Weight Loss:</strong> Promote healthier eating habits and weight loss maintenance.</li>
+                            <li><strong>Executive Function:</strong> Improve work performance, efficiency, and executive management.</li>
+                            <li><strong>Athletic Performance:</strong> Peak performance change, motivation, and fighting burnout.</li>
+                            <li><strong>Addictions:</strong> Reframe subconscious motivations by exploring underlying trauma.</li>
+                            <li><strong>Bed-Wetting:</strong> Successful therapeutic application for enuresis.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-12 p-6 bg-indigo-50 rounded-2xl border border-indigo-100 text-center">
+                    <p class="text-gray-700 italic text-xs leading-relaxed"><strong>Medical Disclaimer:</strong> This information is for educational purposes only. For medical advice or diagnosis, consult a professional. Hypnotic susceptibility varies by individual. Hypnosis is most effective when part of a broader treatment plan.</p>
                 </div>
             </div>
         </section>
         
         <!-- Testimonials Section -->
-        <section id="testimonials" class="py-16 md:py-24 bg-white section-fade-in">
+        <section id="testimonials" class="py-16 md:py-24 bg-gray-50 section-fade-in">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Client Success Stories</h2>
-                    <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">Real transformations from valued clients.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 uppercase tracking-widest">Testimonials</h2>
+                    <p class="mt-3 text-lg text-gray-600">Real stories from the GoodHyp community.</p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Testimonial Card 1 -->
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
-                        <div class="flex items-center mb-2">
+                    <!-- Sarah M Updated -->
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
+                        <div class="flex items-center mb-4">
                             <span class="text-yellow-400">★★★★★</span>
-                            <span class="ml-auto bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Anxiety Management</span>
+                            <span class="ml-auto bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Anxiety</span>
                         </div>
-                        <blockquote class="text-gray-600 italic">"Working with Goodwin Hypnotherapy has been life-changing. After just a few sessions, I learned techniques to manage my stress and feel more confident. I finally feel like myself again."</blockquote>
-                        <cite class="mt-4 block font-semibold text-gray-700 not-italic text-right">— Sarah M.</cite>
+                        <blockquote class="text-gray-600 italic leading-relaxed text-sm">"Working with Ari at GoodHyp has been life-changing. I learned powerful techniques to manage my stress and finally feel in control of my daily life again."</blockquote>
+                        <cite class="mt-6 block font-bold text-gray-800 not-italic">— Sarah M.</cite>
                     </div>
-                    <!-- Testimonial Card 2 -->
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
-                         <div class="flex items-center mb-2">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
+                         <div class="flex items-center mb-4">
                             <span class="text-yellow-400">★★★★★</span>
-                            <span class="ml-auto bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Smoking Cessation</span>
+                            <span class="ml-auto bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Smoking</span>
                         </div>
-                        <blockquote class="text-gray-600 italic">"I had tried everything to quit smoking. The hypnotherapy sessions gave me the mental tools I needed. I've been smoke-free for 8 months now and have no cravings whatsoever."</blockquote>
-                        <cite class="mt-4 block font-semibold text-gray-700 not-italic text-right">— Michael R.</cite>
+                        <blockquote class="text-gray-600 italic leading-relaxed text-sm">"I had tried everything to quit smoking. GoodHyp gave me the mental tools I needed. I've been smoke-free for 8 months now with no cravings whatsoever."</blockquote>
+                        <cite class="mt-6 block font-bold text-gray-800 not-italic">— Michael R.</cite>
                     </div>
-                    <!-- Testimonial Card 3 -->
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
-                        <div class="flex items-center mb-2">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200">
+                        <div class="flex items-center mb-4">
                             <span class="text-yellow-400">★★★★★</span>
-                            <span class="ml-auto bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Pain Management</span>
+                            <span class="ml-auto bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase">Chronic Pain</span>
                         </div>
-                        <blockquote class="text-gray-600 italic">"Chronic pain had taken over my life. Through hypnotherapy, I learned to change my relationship with pain. My quality of life has improved dramatically."</blockquote>
-                        <cite class="mt-4 block font-semibold text-gray-700 not-italic text-right">— Jennifer L.</cite>
+                        <blockquote class="text-gray-600 italic leading-relaxed text-sm">"Chronic pain had taken over my life. Through hypnotherapy with Ari, I learned to change my relationship with my body. My quality of life has improved dramatically."</blockquote>
+                        <cite class="mt-6 block font-bold text-gray-800 not-italic">— Jennifer L.</cite>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Session Details & Payment Section -->
-        <section id="payment" class="py-16 md:py-24 bg-gray-50 section-fade-in">
+        <!-- Your Investment Section -->
+        <section id="payment" class="py-16 md:py-24 bg-white section-fade-in">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Your Investment</h2>
-                <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">A straightforward path to your transformation.</p>
-                <div class="mt-10 grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <!-- Free Consultation Card -->
-                    <div class="bg-white rounded-2xl shadow-xl p-8 border border-indigo-500 flex flex-col">
-                        <div class="flex-grow">
-                            <h3 class="text-2xl font-semibold text-gray-800">Free Consultation</h3>
-                            <p class="text-gray-500 mt-1">30 Minutes</p>
-                            <div class="my-6">
-                                <span class="text-5xl font-bold text-gray-900">Free</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 uppercase tracking-widest mb-4">Your Investment</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-12">Take the first step toward your new domain.</p>
+                
+                <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Free Consultation -->
+                    <div class="bg-white rounded-3xl shadow-xl p-10 border-2 border-indigo-500 flex flex-col scale-105 z-10">
+                        <div class="flex-grow text-left">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-1">First Consultation</h3>
+                            <p class="text-indigo-600 font-bold text-sm uppercase mb-4 tracking-wider">30 Minutes</p>
+                            <div class="mb-6">
+                                <span class="text-5xl font-black text-gray-900 uppercase">Free</span>
                             </div>
-                            <p class="text-gray-600">A brief, no-pressure chat to discuss your goals and see if hypnotherapy is the right fit for you.</p>
+                            <p class="text-gray-600 font-medium">For new clients. Discuss your goals and discover if the GoodHyp approach is right for you.</p>
                         </div>
-                        <a href="#booking" class="w-full mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-transform hover:scale-105 shadow-lg">Book a Free Consultation</a>
+                        <a href="#booking" class="w-full mt-8 bg-indigo-600 text-white px-6 py-4 rounded-2xl font-bold hover:bg-indigo-700 transition-all hover:shadow-lg text-center uppercase tracking-widest text-sm">Schedule Session</a>
                     </div>
-                    <!-- Standard Session Card -->
-                    <div class="bg-white rounded-2xl shadow-xl p-8 border flex flex-col">
-                        <div class="flex-grow">
-                            <h3 class="text-2xl font-semibold text-gray-800">Standard Session</h3>
-                            <p class="text-gray-500 mt-1">60 Minutes</p>
-                            <div class="my-6">
-                                <span class="text-5xl font-bold text-gray-900">$300</span>
+
+                    <!-- Standard Session -->
+                    <div class="bg-gray-50 rounded-3xl shadow-md p-10 border border-gray-200 flex flex-col">
+                        <div class="flex-grow text-left">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-1">Standard Session</h3>
+                            <p class="text-gray-500 font-bold text-sm uppercase mb-4 tracking-wider">60 Minutes</p>
+                            <div class="mb-6">
+                                <span class="text-5xl font-black text-gray-900">$300</span>
                             </div>
-                            <p class="text-gray-600 mb-6">A single, focused session tailored to your specific goals and needs.</p>
+                            <p class="text-gray-600 mb-6 font-medium">A single, focused session tailored to your specific therapeutic and induction needs.</p>
+                            <p class="bg-indigo-100 text-indigo-700 p-2 rounded-lg text-xs font-black uppercase text-center">Promo: MRM1 ($50 OFF)</p>
                         </div>
-                        <!-- Stripe Payment Link for the single session -->
-                        <a href="https://buy.stripe.com/eVq3co4TmbL586M1E64F200" target="_blank" rel="noopener noreferrer" class="w-full mt-6 inline-block bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-transform hover:scale-105 shadow-lg">Pay for Session</a>
+                        <a href="https://buy.stripe.com/eVq3co4TmbL586M1E64F200" target="_blank" class="w-full mt-8 bg-gray-800 text-white px-6 py-4 rounded-2xl font-bold hover:bg-black transition-all text-center uppercase tracking-widest text-sm">Book & Pay</a>
                     </div>
-                     <!-- Monthly Package Card -->
-                    <div class="bg-white rounded-2xl shadow-xl p-8 border flex flex-col">
-                        <div class="flex-grow">
-                            <h3 class="text-2xl font-semibold text-gray-800">Monthly Package</h3>
-                            <p class="text-gray-500 mt-1">4-5 Sessions</p>
-                            <div class="my-6">
-                                <span class="text-5xl font-bold text-gray-900">$1100</span>
+
+                    <!-- Monthly Package -->
+                    <div class="bg-gray-50 rounded-3xl shadow-md p-10 border border-gray-200 flex flex-col">
+                        <div class="flex-grow text-left">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-1">Monthly Package</h3>
+                            <p class="text-gray-500 font-bold text-sm uppercase mb-4 tracking-wider">4-5 Sessions</p>
+                            <div class="mb-6">
+                                <span class="text-5xl font-black text-gray-900">$1100</span>
                             </div>
-                            <p class="text-gray-600 mb-6">A package of sessions for the month to support your ongoing transformation.</p>
+                            <p class="text-gray-600 mb-6 font-medium">Commit to transformation with weekly support and personalized long-term strategy.</p>
+                            <p class="bg-indigo-100 text-indigo-700 p-2 rounded-lg text-xs font-black uppercase text-center">Promo: ABM2 ($100 OFF)</p>
                         </div>
-                        <!-- Stripe Payment Link for the package -->
-                        <a href="https://buy.stripe.com/00weV60D6dTdcn26Yq4F201" target="_blank" rel="noopener noreferrer" class="w-full mt-6 inline-block bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-transform hover:scale-105 shadow-lg">Pay for Package</a>
+                        <a href="https://buy.stripe.com/00weV60D6dTdcn26Yq4F201" target="_blank" class="w-full mt-8 bg-gray-800 text-white px-6 py-4 rounded-2xl font-bold hover:bg-black transition-all text-center uppercase tracking-widest text-sm">Get Package</a>
                     </div>
+                </div>
+
+                <!-- Cancellation Policy -->
+                <div class="mt-16 max-w-4xl mx-auto p-10 bg-gray-100 rounded-3xl border border-gray-200 text-left text-sm leading-relaxed shadow-inner">
+                    <h4 class="font-black text-gray-800 uppercase mb-4 tracking-widest text-base border-b pb-2 border-gray-300">Cancellation Policy</h4>
+                    <p class="text-gray-600 mb-4">We understand that unexpected events can occur. However, to be respectful of our providers' time, and to ensure all clients have fair access to our schedule, we require at least <strong>24 hours' notice</strong> for all cancellations or reschedules.</p>
+                    <p class="font-bold text-gray-800 mb-6 uppercase bg-white p-3 inline-block rounded-lg shadow-sm border border-gray-200">
+                        All cancellations must be made by email: <a href="mailto:Ari@GoodHyp.com" class="text-indigo-600 underline">Ari@GoodHyp.com</a>
+                    </p>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><span class="text-indigo-600 mr-2 font-bold">•</span> <strong>Late cancellations:</strong> Any cancellation made with less than 24 hours' notice will result in a charge equal to 50% of the session fee.</li>
+                        <li class="flex items-start"><span class="text-indigo-600 mr-2 font-bold">•</span> <strong>No-shows:</strong> If you fail to show up for your appointment without any prior notice, you will be charged the full (100%) session fee.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Booking Section -->
-        <section id="booking" class="py-16 md:py-24 bg-white section-fade-in">
+        <section id="booking" class="py-16 md:py-24 bg-gray-50 section-fade-in">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Schedule Your Session</h2>
-                    <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">Choose the appointment type that's right for you.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 uppercase tracking-widest">Schedule Your Session</h2>
+                    <p class="text-gray-600 mt-2">Select your session type below to see available times.</p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                    <div>
-                        <h3 class="text-2xl font-semibold text-center mb-4">1. Free Consultation</h3>
-                        <div class="calendly-inline-widget rounded-lg shadow-lg overflow-hidden" data-url="https://calendly.com/goodwinhypno/free-30-minute-consultation" style="min-width:320px;height:680px;"></div>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-center mb-4">2. Standard Session</h3>
-                        <div class="calendly-inline-widget rounded-lg shadow-lg overflow-hidden" data-url="https://calendly.com/goodwinhypno/60-minute-consultation" style="min-width:320px;height:680px;"></div>
-                    </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                    <!-- Calendly Embeds -->
+                    <div class="calendly-inline-widget rounded-3xl shadow-xl overflow-hidden bg-white" data-url="https://calendly.com/goodwinhypno/free-30-minute-consultation" style="min-width:320px;height:700px;"></div>
+                    <div class="calendly-inline-widget rounded-3xl shadow-xl overflow-hidden bg-white" data-url="https://calendly.com/goodwinhypno/60-minute-consultation" style="min-width:320px;height:700px;"></div>
                 </div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             </div>
@@ -236,50 +315,63 @@
     </main>
     
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white">
-        <div class="container mx-auto px-6 py-12">
-            <div class="grid md:grid-cols-3 gap-8">
+    <footer id="contact" class="bg-gray-900 text-white font-medium">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-3 gap-12">
                 <div>
-                    <h3 class="text-xl font-bold">Goodwin Hypnotherapy</h3>
-                    <p class="mt-2 text-gray-400">Professional hypnotherapy services for personal transformation and healing.</p>
+                    <h3 class="text-3xl font-black text-indigo-400 mb-4 tracking-tighter italic">GoodHyp</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">Professional hypnotherapy for peak performance and total life transformation. Live Like A Lion!</p>
+                    <div class="mt-8 bg-white p-2 inline-block rounded-xl shadow-lg">
+                        <!-- Website QR Code (Replace src with your lion QR code later) -->
+                        <img src="https://placehold.co/150x150/white/333?text=GoodHyp+QR" alt="GoodHyp QR" class="w-32 h-32">
+                    </div>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold">Quick Links</h4>
-                    <ul class="mt-2 space-y-1">
-                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
-                        <li><a href="#philosophy" class="text-gray-400 hover:text-white">Philosophy</a></li>
-                        <li><a href="#testimonials" class="text-gray-400 hover:text-white">Testimonials</a></li>
-                        <li><a href="#booking" class="text-gray-400 hover:text-white">Book Now</a></li>
+                    <h4 class="text-lg font-bold border-b border-gray-700 pb-2 uppercase tracking-widest mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#about" class="hover:text-white hover:translate-x-1 inline-block transition-all">Meet Ari</a></li>
+                        <li><a href="#philosophy" class="hover:text-white hover:translate-x-1 inline-block transition-all">Philosophy</a></li>
+                        <li><a href="#help" class="hover:text-white hover:translate-x-1 inline-block transition-all">Can It Help?</a></li>
+                        <li><a href="#payment" class="hover:text-white hover:translate-x-1 inline-block transition-all">Pricing & Promotion</a></li>
+                        <li><a href="#booking" class="hover:text-white hover:translate-x-1 inline-block transition-all font-bold text-indigo-400 uppercase">Book Now</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold">Contact</h4>
-                    <ul class="mt-2 space-y-1 text-gray-400">
-                        <li>Phone: (978) 896-7795</li>
-                        <li>Email: <a href="mailto:goodwinhypno@gmail.com" class="hover:text-white underline">goodwinhypno@gmail.com</a></li>
+                    <h4 class="text-lg font-bold border-b border-gray-700 pb-2 uppercase tracking-widest mb-6">Direct Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            (617) 308-4960
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <a href="mailto:Info@GoodHyp.com" class="hover:text-white underline">Info@GoodHyp.com</a>
+                        </li>
+                        <li class="pt-4 border-t border-gray-800">
+                            <p class="text-[10px] text-gray-500 uppercase font-black">Cancellations & Scheduling</p>
+                            <a href="mailto:Ari@GoodHyp.com" class="text-indigo-400 font-bold hover:text-white underline">Ari@GoodHyp.com</a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500">
-                <p>&copy; 2025 Goodwin Hypnotherapy. All Rights Reserved.</p>
+            <div class="mt-20 border-t border-gray-800 pt-8 text-center text-gray-600 text-[10px] uppercase font-bold tracking-[0.2em]">
+                <p>&copy; 2026 GoodHyp. Digital Presence Managed by Modit & Kobi.</p>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
-
-            // Handles smooth scrolling when a navigation link is clicked
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
                     const targetId = this.getAttribute('href');
+                    if(targetId === "#") return;
+                    e.preventDefault();
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         targetElement.scrollIntoView({ behavior: 'smooth' });
@@ -289,8 +381,6 @@
                     }
                 });
             });
-
-            // Animate sections on scroll
             const sections = document.querySelectorAll('.section-fade-in');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -298,14 +388,9 @@
                         entry.target.classList.add('visible');
                     }
                 });
-            }, {
-                threshold: 0.1
-            });
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+            }, { threshold: 0.1 });
+            sections.forEach(section => { observer.observe(section); });
         });
     </script>
 </body>
 </html>
-
